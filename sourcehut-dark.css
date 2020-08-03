@@ -22,14 +22,16 @@
     background-color: #181818;
 }
 
-/*blue*/
 a, .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-brand a, .event a, .btn-link {
     color: var(--soft-blau);
 }
 
-/*white*/
 body, pre, textarea.form-control:focus, textarea.form-control, .navbar-light .navbar-brand, .navbar .navbar-text a, .navbar .navbar-text, .btn.btn-primary.btn-block, .nav-tabs .nav-link[disabled] {
     color: var(--soft-weiss);
+}
+
+body {
+    background-image: var(--ghd-bg-img);
 }
 
 pre, .btn, input[type=text] {
