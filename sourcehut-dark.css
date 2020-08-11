@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        SourceHut Dark
 @namespace   OoohBlyat
-@version     0.0.5
+@version     0.0.6
 @homepageURL https://github.com/JohnHolmesII/sourcehut-dark
 @updateURL   https://raw.githubusercontent.com/JohnHolmesII/sourcehut-dark/master/sourcehut-dark.css
 @license     BSD-2-Clause
@@ -14,19 +14,38 @@
     --hard-blau: #182030;
     --soft-weiss: #d8d3d8;
     --soft-gruen: #337633;
-    --soft-rot: #763333
+    --soft-rot: #763333;
+    --soft-grau: #141414;
+    --hard-grau: #181818;
+}
+
+.code-view, pre, .table-code, .form-control, .form-control[readonly] {
+    background-color: var(--soft-grau);
+    color: var(--soft-weiss) !important;
 }
 
 .event, textarea.form-control, textarea.form-control:focus {
     border-radius: 8px;
-    background-color: #181818;
+    background-color: var(--hard-grau);
+}
+
+.header-extension, .lines {
+    background-color: var(--hard-grau) !important;
 }
 
 a, .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-brand a, .event a, .btn-link {
     color: var(--soft-blau);
 }
 
-body, code, pre, textarea.form-control:focus, textarea.form-control, .ticket-list .title>a, .navbar-light .navbar-brand, .navbar .navbar-text a, .navbar .navbar-text, .btn.btn-primary.btn-block, .nav-tabs .nav-link[disabled] {
+a:hover, .navbar-light:hover .navbar-nav:hover .nav-link:hover, .navbar-light:hover .navbar-brand:hover, .event a:hover, .btn-link:hover {
+    color: var(--soft-blau);
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+    color: var(--purple);
+}
+
+body, code, pre, textarea.form-control:focus, textarea.form-control, .ticket-list .title>a, .navbar-light .navbar-brand, .navbar .navbar-text a, .navbar .navbar-text, .btn.btn-primary.btn-block, .nav-tabs .nav-link[disabled], .btn-danger {
     color: var(--soft-weiss);
 }
 
@@ -42,9 +61,18 @@ pre, .btn, input[type=text] {
     border-radius: 4px;
 }
 
+.btn-danger {
+    background-color: var(--soft-rot);
+}
+
 .btn-primary {
     background-color: var(--soft-gruen);
     border-color: #4f864d;
+}
+
+.btn-primary:hover {
+    background-color: #438643;
+    border-color: #5f965d;
 }
 
 .btn-white {
@@ -56,14 +84,10 @@ pre, .btn, input[type=text] {
     color: black;
 }
 
-.text-success {
+.text-success, .nt {
     color: var(--soft-gruen) !important;
 }
 
-.text-danger {
+.text-danger, .no, .s2 {
     color: var(--soft-rot) !important;
-}
-
-pre {
-    background-color: #121212;
 }
